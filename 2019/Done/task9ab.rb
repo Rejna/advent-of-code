@@ -1,5 +1,10 @@
 # frozen_string_literal: true
 
+# Solution to Advent of Code 2019 Day 9 Part 1+2
+# https://adventofcode.com/2019/day/9
+# Answer to Part 1 is: 3280416268
+# Answer to Part 2 is: 80210
+
 class FalseClass
   def to_i
     0

@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+# Solution to Advent of Code 2019 Day 4 Part 2
+# https://adventofcode.com/2019/day/4
+# Answer is: 660
+
 def double_condition(num)
   i = 0
   has_it = false

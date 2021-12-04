@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+# Solution to Advent of Code 2019 Day 10 Part 1
+# https://adventofcode.com/2019/day/10
+# Answer is: ???
+
 input = ['.#..#', '.....', '#####', '....#', '...##']
 
 i = 0
@@ -41,20 +45,19 @@ while i < size
       ast = 0
       jumps.each do |jump|
         times = 1
-        while true
+        loop do
           jump_i = i + times * jump[0]
           jump_j = j + times * jump[1]
-          if jump_i >= 0 && jump_j >= 0 && jump_j < size && jump_i < size
-            jum = (input[jump_i][jump_j] || 'x')
-            puts "#{i} #{j} | #{times} | #{jump[0]} #{jump[1]} | #{jum} | #{jump_i} #{jump_j}"
-            if jum == '.'
-              times += 1
-            elsif jum == '#'
-              ast += 1
-              break
-            else
-              break
-            end
+          break unless jump_i >= 0 && jump_j >= 0 && jump_j < size && jump_i < size
+
+          jum = (input[jump_i][jump_j] || 'x')
+          puts "#{i} #{j} | #{times} | #{jump[0]} #{jump[1]} | #{jum} | #{jump_i} #{jump_j}"
+          case jum
+          when '.'
+            times += 1
+          when '#'
+            ast += 1
+            break
           else
             break
           end

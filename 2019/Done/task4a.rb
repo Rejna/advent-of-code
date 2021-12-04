@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+# Solution to Advent of Code 2019 Day 4 Part 1
+# https://adventofcode.com/2019/day/4
+# Answer is: 1019
+
 def double_condition(num)
   num[0] == num[1] || num[1] == num[2] || num[2] == num[3] || num[3] == num[4] || num[4] == num[5]
 end

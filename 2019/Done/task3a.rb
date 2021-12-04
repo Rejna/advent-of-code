@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+# Solution to Advent of Code 2019 Day 3 Part 1
+# https://adventofcode.com/2019/day/3
+# Answer is: 731
+
 def print_floor
   @floor.each do |row|
     puts row.join(' ')

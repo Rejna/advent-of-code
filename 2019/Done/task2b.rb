@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+# Solution to Advent of Code 2019 Day 2 Part 2
+# https://adventofcode.com/2019/day/2
+# Answer is: 8018
+
 # input = [1, 9, 10, 3, 2, 3, 11, 0, 99, 30, 40, 50]
 input = [1, 0, 0, 3, 1, 1, 2, 3, 1, 3, 4, 3, 1, 5, 0, 3, 2, 1, 9, 19, 1, 19, 5, 23, 2, 6, 23, 27, 1, 6, 27, 31, 2, 31,
          9, 35, 1, 35, 6, 39, 1, 10, 39, 43, 2, 9, 43, 47, 1, 5, 47, 51, 2, 51, 6, 55, 1, 5, 55, 59, 2, 13, 59, 63, 1,
@@ -17,7 +21,7 @@ while noun < 100
     memory[1] = noun
     memory[2] = verb
 
-    while true
+    loop do
       op = input[pointer]
 
       case op

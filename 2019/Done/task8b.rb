@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+# Solution to Advent of Code 2019 Day 8 Part 2
+# https://adventofcode.com/2019/day/8
+# Answer is: FHJUL
+
 # input = '0222112222120000'
 # width = 2
 # height = 2
@@ -52,12 +56,11 @@ while i < height
         pixel = layers[k][i][j]
         k += 1
       end
-      if pixel != '2' || k == layer_count
-        # puts "Final #{i} #{j} - #{pixel}"
-        # puts '----------------------'
-        message[i][j] = pixel
-        break
-      end
+      next unless pixel != '2' || k == layer_count
+
+      # puts "Final #{i} #{j} - #{pixel}"
+      # puts '----------------------'
+      message[i][j] = pixel
     end
     j += 1
   end

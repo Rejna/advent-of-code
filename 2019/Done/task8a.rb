@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+# Solution to Advent of Code 2019 Day 8 Part 1
+# https://adventofcode.com/2019/day/8
+# Answer is: 2250
+
 # input = '123456789012'
 # width = 3
 # height = 2

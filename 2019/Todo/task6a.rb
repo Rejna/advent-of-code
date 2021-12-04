@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+# Solution to Advent of Code 2019 Day 6 Part 1
+# https://adventofcode.com/2019/day/6
+# Answer is: ???
+
 class Node
   attr_accessor :name, :parent, :children
 
@@ -12,74 +16,74 @@ end
 
 input = ['COM)B', 'B)C', 'C)D', 'D)E', 'E)F', 'B)G', 'G)H', 'D)I', 'E)J', 'J)K', 'K)L']
 
-solar_system2 = {
-  name: 'COM',
-  parent: nil,
-  children: [
-    {
-      name: 'B',
-      parent: 'COM',
-      children: [
-        {
-          name: 'G',
-          parent: 'B',
-          children: [
-            {
-              name: 'H',
-              parent: 'G',
-              children: []
-            }
-          ]
-        },
-        {
-          name: 'C',
-          parent: 'B',
-          children: [
-            {
-              name: 'D',
-              parent: 'C',
-              children: [
-                {
-                  name: 'I',
-                  parent: 'D',
-                  children: []
-                },
-                {
-                  name: 'E',
-                  parent: 'D',
-                  children: [
-                    {
-                      name: 'F',
-                      parent: 'E',
-                      children: []
-                    },
-                    {
-                      name: 'J',
-                      parent: 'E',
-                      children: [
-                        {
-                          name: 'K',
-                          parent: 'J',
-                          children: [
-                            {
-                              name: 'L',
-                              parent: 'K',
-                              children: []
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
+# solar_system = {
+#   name: 'COM',
+#   parent: nil,
+#   children: [
+#     {
+#       name: 'B',
+#       parent: 'COM',
+#       children: [
+#         {
+#           name: 'G',
+#           parent: 'B',
+#           children: [
+#             {
+#               name: 'H',
+#               parent: 'G',
+#               children: []
+#             }
+#           ]
+#         },
+#         {
+#           name: 'C',
+#           parent: 'B',
+#           children: [
+#             {
+#               name: 'D',
+#               parent: 'C',
+#               children: [
+#                 {
+#                   name: 'I',
+#                   parent: 'D',
+#                   children: []
+#                 },
+#                 {
+#                   name: 'E',
+#                   parent: 'D',
+#                   children: [
+#                     {
+#                       name: 'F',
+#                       parent: 'E',
+#                       children: []
+#                     },
+#                     {
+#                       name: 'J',
+#                       parent: 'E',
+#                       children: [
+#                         {
+#                           name: 'K',
+#                           parent: 'J',
+#                           children: [
+#                             {
+#                               name: 'L',
+#                               parent: 'K',
+#                               children: []
+#                             }
+#                           ]
+#                         }
+#                       ]
+#                     }
+#                   ]
+#                 }
+#               ]
+#             }
+#           ]
+#         }
+#       ]
+#     }
+#   ]
+# }
 
 solar_system = Node.new('COM', nil)
 

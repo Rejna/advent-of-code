@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+# Solution to Advent of Code 2019 Day 1 Part 1
+# https://adventofcode.com/2019/day/1
+# Answer is: 3233481
+
 # input = [14, 1969, 100756]
 input = [54_755, 96_495, 111_504, 53_923, 118_158, 118_082, 137_413, 135_315, 87_248,
          127_646, 79_201, 52_399, 77_966, 129_568, 63_880, 128_973, 55_491, 111_226, 126_447,

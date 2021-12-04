@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+# Solution to Advent of Code 2019 Day 5 Part 1
+# https://adventofcode.com/2019/day/5
+# Answer is: 12440243
+
 def get_value(address, mode)
   if mode.to_i.zero?
     @memory[@memory[address]]
