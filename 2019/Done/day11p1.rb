@@ -2,7 +2,7 @@
 
 # Solution to Advent of Code 2019 Day 11 Part 1
 # https://adventofcode.com/2019/day/11
-# Answer is: ???
+# Answer is: 1967
 
 class FalseClass
   def to_i
@@ -20,7 +20,7 @@ def get_value(address, mode)
   case mode.to_i
   when 0
     # puts "mode 0, #{@memory[address]}"
-    @memory[@memory[address]]
+    @memory[@memory[address]] || 0
   when 1
     # puts "mode 1, #{address}"
     @memory[address]
@@ -30,6 +30,75 @@ def get_value(address, mode)
   when 9
     # puts "#{address} #{@relative_base}"
     @memory[address] + @relative_base
+  end
+end
+
+def action
+# def rotate
+  @space[@cur_y][@cur_x] = @paint_color
+  @visited_fields << [@cur_x, @cur_y] unless @visited_fields.include?([@cur_x, @cur_y])
+  if @turn_direction.zero? # 90 left
+    case @cur_direction
+    when 'up'
+      @ship = '<'
+      @cur_direction = 'left'
+    when 'left'
+      @ship = 'v'
+      @cur_direction = 'down'
+    when 'down'
+      @ship = '>'
+      @cur_direction = 'right'
+    else
+      @ship = '^'
+      @cur_direction = 'up'
+    end
+  else # 90 right
+    case @cur_direction
+    when 'up'
+      @ship = '>'
+      @cur_direction = 'right'
+    when 'left'
+      @ship = '^'
+      @cur_direction = 'up'
+    when 'down'
+      @ship = '<'
+      @cur_direction = 'left'
+    else
+      @ship = 'v'
+      @cur_direction = 'down'
+    end
+  end
+  move
+end
+
+def move
+  # @space[@cur_y][@cur_x] = @paint_color
+  case @cur_direction
+  when 'up'
+    @cur_y -= 1
+  when 'down'
+    @cur_y += 1
+  when 'left'
+    @cur_x -= 1
+  else
+    @cur_x += 1
+  end
+end
+
+def print_space
+  i = 0
+  while i < @space.length
+    j = 0
+    while j < @space[i].length
+      if i == @cur_y && j == @cur_x
+        putc @ship
+      else
+        putc @space[i][j].zero? ? ' ' : '#'
+      end
+      j += 1
+    end
+    puts
+    i += 1
   end
 end
 
@@ -61,6 +130,20 @@ end
            21_102, 1, 636, 0, 106, 0, 511, 21_202, -2, -1, -2, 22_201, -4, -2, -4, 109, -5, 2105, 1, 0]
 pointer = 0
 @relative_base = 0
+first_output = true
+@visited_fields = []
+@paint_color = 1
+@turn_direction = 0
+@ship = '^'
+
+@cur_x = 10
+@cur_y = 40
+@cur_direction = 'up'
+
+@space = []
+70.times do
+  @space << Array.new(70, 0)
+end
 
 loop do
   command = @memory[pointer]
@@ -75,11 +158,17 @@ loop do
     param_count = 4
   when 3
     operand = '@memory['
-    operand2 = '] = gets.to_i'
+    operand2 = "] = #{@space[@cur_y][@cur_x]}"
     param_count = 2
   when 4
     # operand = 'output = '
-    operand = 'puts '
+    if first_output
+      operand = '@paint_color = '
+      first_output = false
+    else
+      operand = '@turn_direction = '
+      first_output = true
+    end
     param_count = 2
   when 5
     operand = '!'
@@ -124,18 +213,26 @@ loop do
   when 1, 2, 7, 8
     val2 = get_value(pointer + 2, param_modes[1])
     addr = get_value(pointer + 3, param_modes[2])
-    # puts "OP_CODE: #{op_code}\tCOMMAND: #{command}\t@memory[#{addr}] = #{val1} #{operand} #{val2} = #{eval("#{val1} #{operand} #{val2}").to_i}"
+    # puts "OP_CODE: #{op_code}\tCOMMAND: #{command}\tPOINTER: #{pointer}\t@memory[#{addr}] = #{val1} #{operand} #{val2}" = #{eval("#{val1} #{operand} #{val2}").to_i}"
     @memory[addr] = eval("#{val1} #{operand} #{val2}").to_i
-  when 3, 4, 9
-    # puts "OP_CODE: #{op_code}\tCOMMAND: #{command}\t#{operand}#{val1}#{operand2}"
+  when 3, 9
+    # puts "OP_CODE: #{op_code}\tCOMMAND: #{command}\tPOINTER: #{pointer}\t#{operand}#{val1}#{operand2}"
     eval("#{operand}#{val1}#{operand2}")
+  when 4
+    # puts "OP_CODE: #{op_code}\tCOMMAND: #{command}\tPOINTER: #{pointer}\t#{operand}#{val1}#{operand2}"
+    eval("#{operand}#{val1}#{operand2}")
+
+    action if first_output
   when 5, 6
-    # puts "OP_CODE: #{op_code}\tCOMMAND: #{command}\t#{operand}#{val1}.zero?"
+    val2 = get_value(pointer + 2, param_modes[1])
+    # puts "OP_CODE: #{op_code}\tCOMMAND: #{command}\tPOINTER: #{pointer}\t#{operand}#{val1}.zero? -> #{val2}"
     if eval("#{operand}#{val1}.zero?")
-      val2 = get_value(pointer + 2, param_modes[1])
       pointer = val2
       param_count = 0
     end
   end
   pointer += param_count
 end
+
+print_space
+puts @visited_fields.length
