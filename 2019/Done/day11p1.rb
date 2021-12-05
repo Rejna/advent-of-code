@@ -34,7 +34,6 @@ def get_value(address, mode)
 end
 
 def action
-# def rotate
   @space[@cur_y][@cur_x] = @paint_color
   @visited_fields << [@cur_x, @cur_y] unless @visited_fields.include?([@cur_x, @cur_y])
   if @turn_direction.zero? # 90 left
@@ -72,7 +71,6 @@ def action
 end
 
 def move
-  # @space[@cur_y][@cur_x] = @paint_color
   case @cur_direction
   when 'up'
     @cur_y -= 1
