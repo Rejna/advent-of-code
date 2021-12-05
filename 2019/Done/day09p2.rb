@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
-# Solution to Advent of Code 2019 Day 9 Part 1+2
+# Solution to Advent of Code 2019 Day 9 Part 2
 # https://adventofcode.com/2019/day/9
-# Answer to Part 1 is: 3280416268
-# Answer to Part 2 is: 80210
+# Answer is: 80210
 
 class FalseClass
   def to_i
@@ -102,7 +101,7 @@ loop do
     param_count = 4
   when 3
     operand = '@memory['
-    operand2 = '] = gets.to_i'
+    operand2 = '] = 2'
     param_count = 2
   when 4
     # operand = 'output = '
