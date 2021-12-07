@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Solution to Advent of Code 2020 Day 16 Part 2
-# https://adventofcode.com/2020/day/16
+# https://adventofcode.com/2020/day/16#part2
 # Answer is: ??
 
 # rules = ['class: 1-3 or 5-7', 'row: 6-11 or 33-44', 'seat: 13-40 or 45-50']

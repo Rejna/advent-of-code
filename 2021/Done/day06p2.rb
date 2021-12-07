@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Solution to Advent of Code 2021 Day 6 Part 2
-# https://adventofcode.com/2021/day/6
+# https://adventofcode.com/2021/day/6#part2
 # Answer is: 1693022481538
 
 # input = [3, 4, 3, 1, 2]

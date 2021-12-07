@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Solution to Advent of Code 2019 Day 2 Part 2
-# https://adventofcode.com/2019/day/2
+# https://adventofcode.com/2019/day/2#part2
 # Answer is: 8018
 
 # input = [1, 9, 10, 3, 2, 3, 11, 0, 99, 30, 40, 50]

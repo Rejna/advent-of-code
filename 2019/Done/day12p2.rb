@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Solution to Advent of Code 2019 Day 12 Part 2
-# https://adventofcode.com/2019/day/12
+# https://adventofcode.com/2019/day/12#part2
 # Answer is: 326365108375488
 
 class Moon

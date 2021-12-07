@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Solution to Advent of Code 2019 Day 4 Part 2
-# https://adventofcode.com/2019/day/4
+# https://adventofcode.com/2019/day/4#part2
 # Answer is: 660
 
 def double_condition(num)

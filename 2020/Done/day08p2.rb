@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Solution to Advent of Code 2020 Day 8 Part 2
-# https://adventofcode.com/2020/day/8
+# https://adventofcode.com/2020/day/8#part2
 # Answer is: 1976
 
 # input = ['nop +0', 'acc +1', 'jmp +4', 'acc +3', 'jmp -3', 'acc -99', 'acc +1', 'jmp -4', 'acc +6']

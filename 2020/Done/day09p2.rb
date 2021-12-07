@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Solution to Advent of Code 2020 Day 9 Part 2
-# https://adventofcode.com/2020/day/9
+# https://adventofcode.com/2020/day/9#part2
 # Answer is: 55732936
 
 # input = [20, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 1, 21, 22, 23, 24, 25, 45, 66]

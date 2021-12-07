@@ -1,17 +1,17 @@
 # frozen_string_literal: true
 
 # Solution to Advent of Code 2020 Day 22 Part 2
-# https://adventofcode.com/2020/day/22
+# https://adventofcode.com/2020/day/22#part2
 # Answer is: 34424
 
 # @player1 = [9, 2, 6, 3, 1]
 # @player2 = [5, 8, 4, 7, 10]
 
-@player1 = [24, 22, 26, 6, 14, 19, 27, 17, 39, 34, 40, 41, 23, 30, 36, 11, 28, 3, 10, 21, 9, 50, 32, 25, 8]
-@player2 = [48, 49, 47, 15, 42, 44, 5, 4, 13, 7, 20, 43, 12, 37, 29, 18, 45, 16, 1, 46, 38, 35, 2, 33, 31]
-
 # @player1 = [43, 19]
 # @player2 = [2, 29, 14]
+
+@player1 = [24, 22, 26, 6, 14, 19, 27, 17, 39, 34, 40, 41, 23, 30, 36, 11, 28, 3, 10, 21, 9, 50, 32, 25, 8]
+@player2 = [48, 49, 47, 15, 42, 44, 5, 4, 13, 7, 20, 43, 12, 37, 29, 18, 45, 16, 1, 46, 38, 35, 2, 33, 31]
 
 def play_game(game_no, player1, player2)
   # puts "=== Game #{game_no} ==="

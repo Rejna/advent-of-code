@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Solution to Advent of Code 2020 Day 14 Part 2
-# https://adventofcode.com/2020/day/14
+# https://adventofcode.com/2020/day/14#part2
 # Answer is: 2737766154126
 
 # input = ['mask = XXXXXXXXXXXXXXXXXXXXXXXXXXXXX1XXXX0X', 'mem[8] = 11', 'mem[7] = 101', 'mem[8] = 0']

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Solution to Advent of Code 2020 Day 15 Part 2
-# https://adventofcode.com/2020/day/15
+# https://adventofcode.com/2020/day/15#part2
 # Answer is: 51358
 
 # Based on: https://oeis.org/A181391 (second python generator, first was too slow)

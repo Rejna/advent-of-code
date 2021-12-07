@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Solution to Advent of Code 2021 Day 7 Part 2
-# https://adventofcode.com/2021/day/7
+# https://adventofcode.com/2021/day/7#part2
 # Answer is: 95851339
 
 # input = [16, 1, 2, 0, 4, 2, 7, 1, 2, 14]

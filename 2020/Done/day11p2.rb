@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Solution to Advent of Code 2020 Day 11 Part 2
-# https://adventofcode.com/2020/day/11
+# https://adventofcode.com/2020/day/11#part2
 # Answer is: 2064
 
 # @input = %w[L.LL.LL.LL LLLLLLL.LL L.L.L..L.. LLLL.LL.LL L.LL.LL.LL L.LLLLL.LL ..L.L..... LLLLLLLLLL L.LLLLLL.L

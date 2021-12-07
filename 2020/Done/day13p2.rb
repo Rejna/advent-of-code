@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Solution to Advent of Code 2020 Day 13 Part 2
-# https://adventofcode.com/2020/day/13
+# https://adventofcode.com/2020/day/13#part2
 # Answer is: 538703333547789
 
 def extended_gcd(a, b)

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Solution to Advent of Code 2020 Day 18 Part 2
-# https://adventofcode.com/2020/day/18
+# https://adventofcode.com/2020/day/18#part2
 # Answer is: 8952864356993
 
 # rubocop:disable Metrics/ClassLength

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Solution to Advent of Code 2019 Day 7 Part 2
-# https://adventofcode.com/2019/day/7
+# https://adventofcode.com/2019/day/7#part2
 # Answer is: 4374895
 
 class FalseClass

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Solution to Advent of Code 2020 Day 7 Part 2
-# https://adventofcode.com/2020/day/7
+# https://adventofcode.com/2020/day/7#part2
 # Answer is: ???
 
 # input = ['light red bags contain 1 bright white bag, 2 muted yellow bags.',

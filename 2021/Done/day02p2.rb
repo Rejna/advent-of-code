@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Solution to Advent of Code 2021 Day 2 Part 2
-# https://adventofcode.com/2021/day/2
+# https://adventofcode.com/2021/day/2#part2
 # Answer is: 2086261056
 
 # input = ['forward 5', 'down 5', 'forward 8', 'up 3', 'down 8', 'forward 2']

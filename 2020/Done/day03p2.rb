@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Solution to Advent of Code 2020 Day 3 Part 2
-# https://adventofcode.com/2020/day/3
+# https://adventofcode.com/2020/day/3#part2
 # Answer is: 727923200
 
 # input = %w[..##....... #...#...#.. .#....#..#. ..#.#...#.# .#...##..#. ..#.##..... .#.#.#....# .#........# #.##...#...

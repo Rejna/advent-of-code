@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Solution to Advent of Code 2020 Day 6 Part 2
-# https://adventofcode.com/2020/day/6
+# https://adventofcode.com/2020/day/6#part2
 # Answer is: 3430
 
 # input = ['abc','','a','b','c','','ab','ac','','a','a','a','a','','b']

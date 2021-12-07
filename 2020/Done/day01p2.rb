@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Solution to Advent of Code 2020 Day 1 Part 2
-# https://adventofcode.com/2020/day/1
+# https://adventofcode.com/2020/day/1#part2
 # Answer is: 272611658
 
 input = [1801, 1324, 1924, 1848, 1735, 1721, 1948, 1667, 1832, 1773, 1972, 1777, 1866, 1850, 1786, 1617, 1806, 1923,

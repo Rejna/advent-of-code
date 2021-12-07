@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Solution to Advent of Code 2020 Day 12 Part 2
-# https://adventofcode.com/2020/day/12
+# https://adventofcode.com/2020/day/12#part2
 # Answer is: 63843
 
 # input = %w[F10 N3 F7 R90 F11]

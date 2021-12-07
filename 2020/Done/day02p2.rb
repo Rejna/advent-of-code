@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Solution to Advent of Code 2020 Day 2 Part 2
-# https://adventofcode.com/2020/day/2
+# https://adventofcode.com/2020/day/2#part2
 # Answer is: 294
 
 input = ['16-18 h: hhhhhhhhhhhhhhhhhh', '17-18 d: ddddddddddddddddzn', '15-18 c: cccccccccccccczcczc',

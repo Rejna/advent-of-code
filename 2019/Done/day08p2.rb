@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Solution to Advent of Code 2019 Day 8 Part 2
-# https://adventofcode.com/2019/day/8
+# https://adventofcode.com/2019/day/8#part2
 # Answer is: FHJUL
 
 # input = '0222112222120000'

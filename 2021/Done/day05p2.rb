@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Solution to Advent of Code 2021 Day 5 Part 2
-# https://adventofcode.com/2021/day/5
+# https://adventofcode.com/2021/day/5#part2
 # Answer is: 19571
 
 def min(a, b)
