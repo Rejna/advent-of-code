@@ -2,7 +2,7 @@
 
 # Solution to Advent of Code 2018 Day 11 Part 2
 # https://adventofcode.com/2018/day/11#part2
-# Answer is: 235,288,13 in 1m18s
+# Answer is: 235,288,13 in ~50s
 
 def calculate_cell_power(x, y, serial_no)
   x += 1
@@ -14,24 +14,54 @@ def calculate_cell_power(x, y, serial_no)
 end
 
 def calculate_nxn_power(x, y, box_size)
-  total_power = @previous_box_size[y][x]
+  return calculate_nxn_power_even(x, y, box_size / 2) if (box_size % 2).zero?
+  return calculate_nxn_power_odd(x, y, box_size) unless (box_size % 2).zero?
+end
+
+def calculate_nxn_power_even(x, y, half_box_size)
+  # puts "WOLOLO #{x},#{y} #{half_box_size}" if half_box_size == 2
+  # gets if half_box_size == 2
+  total_power = @powers_per_box_size[half_box_size][y][x]
+
+  total_power += @powers_per_box_size[half_box_size][y + half_box_size][x]
+  # puts "#{x},#{y + half_box_size}" if half_box_size == 2
+  # gets if half_box_size == 2
+  total_power += @powers_per_box_size[half_box_size][y][x + half_box_size]
+  # puts "#{x + half_box_size},#{y}" if half_box_size == 2
+  # gets if half_box_size == 2
+  total_power += @powers_per_box_size[half_box_size][y + half_box_size][x + half_box_size]
+  # puts "#{x + half_box_size},#{y + half_box_size}" if half_box_size == 2
+  # gets if half_box_size == 2
+
+  # puts 'XXXXXXXXXXXXXXXXXXXXX' if half_box_size == 2
+  # if half_box_size == 2
+  #   puts "#{x},#{y} #{total_power}"
+  #   gets
+  # end
+  @powers_per_box_size[half_box_size * 2][y][x] = total_power
+  total_power
+end
+
+def calculate_nxn_power_odd(x, y, box_size)
+  total_power = @powers_per_box_size[box_size - 1][y][x]
   # puts "WOLOLO #{x},#{y} #{box_size}"
   # gets
 
   i = 0
   while i < box_size
-    total_power += @box_size_one[y + box_size - 1][x + i]
+    total_power += @powers_per_box_size[1][y + box_size - 1][x + i]
     # puts "#{x + i},#{y + box_size - 1}"
     # gets
     if i < box_size - 1
-      total_power += @box_size_one[y + i][x + box_size - 1]
+      total_power += @powers_per_box_size[1][y + i][x + box_size - 1]
       # puts "WOW #{x + box_size - 1},#{y + i}"
       # gets
     end
     i += 1
   end
   # puts 'XXXXXXXXXXXXXXXXXXXXX'
-  @previous_box_size[y][x] = total_power
+
+  @powers_per_box_size[box_size][y][x] = total_power
   total_power
 end
 
@@ -50,11 +80,9 @@ max_x = 0
 max_y = 0
 max_box_size = 0
 
-@box_size_one = []
-@previous_box_size = []
+@powers_per_box_size = [[], []]
 size.times do
-  @box_size_one << Array.new(size, 0)
-  @previous_box_size << Array.new(size, 0)
+  @powers_per_box_size[1] << Array.new(size, 0)
 end
 
 x = 0
@@ -68,8 +96,7 @@ while x <= size - 1
       max_y = y
       max_box_size = 1
     end
-    @box_size_one[y][x] = power
-    @previous_box_size[y][x] = power
+    @powers_per_box_size[1][y][x] = power
     y += 1
   end
   x += 1
@@ -78,6 +105,11 @@ end
 box_size = 2
 
 while box_size <= size
+  @powers_per_box_size << []
+  size.times do
+    @powers_per_box_size[box_size] << Array.new(size, 0)
+  end
+
   x = 0
   while x <= size - box_size
     y = 0
@@ -93,7 +125,8 @@ while box_size <= size
     end
     x += 1
   end
-  puts "Box size #{box_size} #{max_power} #{max_x + 1},#{max_y + 1},#{max_box_size}"
+  # puts "Box size #{box_size} #{max_power} #{max_x + 1},#{max_y + 1},#{max_box_size}"
   box_size += 1
 end
+
 puts "#{max_x + 1},#{max_y + 1},#{max_box_size}"
