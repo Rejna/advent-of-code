@@ -2,7 +2,7 @@
 
 # Solution to Advent of Code 2018 Day 11 Part 2
 # https://adventofcode.com/2018/day/11#part2
-# Answer is: 235,288,13 in ~50s
+# Answer is: 235,288,13 in ~6s
 
 def calculate_cell_power(x, y, serial_no)
   x += 1
@@ -43,22 +43,26 @@ def calculate_nxn_power_even(x, y, half_box_size)
 end
 
 def calculate_nxn_power_odd(x, y, box_size)
-  total_power = @powers_per_box_size[box_size - 1][y][x]
+  total_power = @powers_per_box_size[(box_size + 1) / 2][y][x]
   # puts "WOLOLO #{x},#{y} #{box_size}"
   # gets
 
-  i = 0
-  while i < box_size
-    total_power += @powers_per_box_size[1][y + box_size - 1][x + i]
-    # puts "#{x + i},#{y + box_size - 1}"
-    # gets
-    if i < box_size - 1
-      total_power += @powers_per_box_size[1][y + i][x + box_size - 1]
-      # puts "WOW #{x + box_size - 1},#{y + i}"
-      # gets
-    end
-    i += 1
-  end
+  total_power += @powers_per_box_size[(box_size + 1) / 2][y + ((box_size - 1) / 2)][x + ((box_size - 1) / 2)]
+  # puts "#{x + ((size - 1) / 2)},#{y + ((size - 1) / 2)}"
+  # gets
+
+  total_power -= @powers_per_box_size[1][y + ((box_size - 1) / 2)][x + ((box_size - 1) / 2)]
+  # puts "#{x + ((size - 1) / 2)},#{y + ((size - 1) / 2)}"
+  # gets
+
+  total_power += @powers_per_box_size[(box_size - 1) / 2][y][x + ((box_size + 1) / 2)]
+  # puts "#{x + ((size + 1) / 2)},#{y}"
+  # gets
+
+  total_power += @powers_per_box_size[(box_size - 1) / 2][y + ((box_size + 1) / 2)][x]
+  # puts "#{x},#{y + ((size + 1) / 2)}"
+  # gets
+
   # puts 'XXXXXXXXXXXXXXXXXXXXX'
 
   @powers_per_box_size[box_size][y][x] = total_power
