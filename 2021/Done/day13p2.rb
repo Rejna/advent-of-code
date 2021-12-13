@@ -5,13 +5,9 @@
 # Answer is: AHPRPAUZ
 
 def overlap_points(point1, point2)
-  if point1 == '#' && point2 == '#'
-    '#'
-  elsif (point1 == '#' && point2 == '.') || (point1 == '.' && point2 == '#')
-    '#'
-  elsif point1 == '.' && point2 == '.'
-    '.'
-  end
+  return '#' if point1 == '#' || point2 == '#'
+
+  '.'
 end
 
 # input = %w[6,10 0,14 9,10 0,3 10,4 4,11 6,0 6,12 4,1 0,13 10,12 3,4 3,0 8,4 1,10 2,14 8,10 9,0]
@@ -103,7 +99,6 @@ end
 
 folds.each do |fold|
   new_board = board.clone
-  visible_points = 0
 
   i = 0
   while i < new_board.length
@@ -111,17 +106,9 @@ folds.each do |fold|
     while j < new_board[i].length
       case fold[0]
       when 'x'
-        if j > fold[1]
-          new_board[i][2 * fold[1] - j] = overlap_points(new_board[i][j], new_board[i][2 * fold[1] - j])
-          visible_points += 1 if new_board[i][2 * fold[1] - j] == '#'
-          # new_board[i][j] = 'X'
-        end
+        new_board[i][2 * fold[1] - j] = overlap_points(new_board[i][j], new_board[i][2 * fold[1] - j]) if j > fold[1]
       else
-        if i > fold[1]
-          new_board[2 * fold[1] - i][j] = overlap_points(new_board[i][j], new_board[2 * fold[1] - i][j])
-          visible_points += 1 if new_board[2 * fold[1] - i][j] == '#'
-          # new_board[i][j] = 'X'
-        end
+        new_board[2 * fold[1] - i][j] = overlap_points(new_board[i][j], new_board[2 * fold[1] - i][j]) if i > fold[1]
       end
 
       j += 1

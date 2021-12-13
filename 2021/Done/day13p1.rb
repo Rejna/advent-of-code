@@ -5,13 +5,9 @@
 # Answer is: 720
 
 def overlap_points(point1, point2)
-  if point1 == '#' && point2 == '#'
-    '#'
-  elsif (point1 == '#' && point2 == '.') || (point1 == '.' && point2 == '#')
-    '#'
-  elsif point1 == '.' && point2 == '.'
-    '.'
-  end
+  return '#' if point1 == '#' || point2 == '#'
+
+  '.'
 end
 
 # input = %w[6,10 0,14 9,10 0,3 10,4 4,11 6,0 6,12 4,1 0,13 10,12 3,4 3,0 8,4 1,10 2,14 8,10 9,0]
