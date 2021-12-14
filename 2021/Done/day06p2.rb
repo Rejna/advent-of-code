@@ -47,4 +47,4 @@ while day < 256
   # puts "After #{day} day#{day > 1 ? 's' : ''}: #{fish_age.reject { |k, v| v.zero? }} (#{fish_age.values.sum} fish)"
 end
 
-puts "After #{day} day#{day > 1 ? 's' : ''}: #{fish_age.values.sum} fish"
+puts fish_age.values.sum

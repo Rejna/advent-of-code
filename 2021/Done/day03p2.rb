@@ -163,12 +163,12 @@ while col_id < all_bits
   end
 
   if temp_most.length == 1
-    puts "most oxygen #{temp_most[0].to_i(2)}"
+    # puts "most oxygen #{temp_most[0].to_i(2)}"
     result *= temp_most[0].to_i(2)
     temp_most = []
     break
   elsif temp.length == 1
-    puts "temp oxygen #{temp[0].to_i(2)}"
+    # puts "temp oxygen #{temp[0].to_i(2)}"
     result *= temp[0].to_i(2)
     break
   else
@@ -195,12 +195,12 @@ while col_id < all_bits
   end
 
   if temp_least.length == 1
-    puts "least co2 #{temp_least[0].to_i(2)}"
+    # puts "least co2 #{temp_least[0].to_i(2)}"
     result *= temp_least[0].to_i(2)
     temp_least = []
     break
   elsif temp.length == 1
-    puts "temp co2 #{temp[0].to_i(2)}"
+    # puts "temp co2 #{temp[0].to_i(2)}"
     result *= temp[0].to_i(2)
     break
   else

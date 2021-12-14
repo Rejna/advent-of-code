@@ -153,6 +153,6 @@ while col_id < input[0].length
   col_id += 1
 end
 
-puts "gamma #{most_common.to_i(2)}"
-puts "epsilon #{least_common.to_i(2)}"
+# puts "gamma #{most_common.to_i(2)}"
+# puts "epsilon #{least_common.to_i(2)}"
 puts most_common.to_i(2) * least_common.to_i(2)

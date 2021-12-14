@@ -36,4 +36,4 @@ while day < 80
   # puts "After #{day}: #{input.join(',')} (#{input.length} fish)"
 end
 
-puts "After #{day} days: #{input.length} fish"
+puts input.length

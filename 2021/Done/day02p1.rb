@@ -107,7 +107,6 @@ input = ['forward 9', 'down 8', 'down 2', 'down 4', 'up 8', 'forward 8', 'down 7
          'forward 6', 'forward 4', 'down 4', 'down 1', 'forward 8', 'up 7', 'down 1', 'down 2', 'up 7', 'forward 6',
          'down 5', 'up 6', 'down 7', 'down 8', 'down 2', 'up 5', 'forward 1', 'up 5', 'down 1', 'down 6', 'down 2',
          'down 3', 'forward 8', 'down 5', 'forward 6']
-# answer: 2091984
 horizontal = 0
 depth = 0
 

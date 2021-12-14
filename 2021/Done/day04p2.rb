@@ -791,7 +791,7 @@ done = false
 bingo = 0
 
 numbers.each do |number|
-  puts "--------- NUMBER #{number} !!!! ----------------"
+  # puts "--------- NUMBER #{number} !!!! ----------------"
   i = 0
   while i < boards_num
     if @boards_with_bingoes[i]
