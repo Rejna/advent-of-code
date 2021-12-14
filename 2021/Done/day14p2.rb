@@ -51,6 +51,15 @@ end
 
   pairs_tally = new_pairs_tally.clone
 
+  # letter_tally = {}
+  # pairs_tally.each do |key, val|
+  #   letter_tally[key[0]] += val if letter_tally.key?(key[0])
+  #   letter_tally[key[0]] = val unless letter_tally.key?(key[0])
+
+  #   letter_tally[key[1]] += val if letter_tally.key?(key[1])
+  #   letter_tally[key[1]] = val unless letter_tally.key?(key[1])
+  # end
+  # letter_tally = letter_tally.values.map { |v| (v.to_f / 2).ceil }
   # puts "After step #{k + 1}: #{letter_tally.max - letter_tally.min}"
 end
 
@@ -62,6 +71,6 @@ pairs_tally.each do |key, val|
   letter_tally[key[1]] += val if letter_tally.key?(key[1])
   letter_tally[key[1]] = val unless letter_tally.key?(key[1])
 end
-
 letter_tally = letter_tally.values.map { |v| (v.to_f / 2).ceil }
+
 puts letter_tally.max - letter_tally.min
