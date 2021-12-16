@@ -7,7 +7,7 @@
 class Graph
   def initialize(input)
     @adj_list = {}
-    @all_paths = []
+    @all_paths = 0
 
     input.map { |e| e.split('-') }.each do |edge|
       add_edge(edge[0], edge[1])
@@ -22,7 +22,7 @@ class Graph
 
   def count_all_paths(s, d)
     generate_all_paths(s, d)
-    @all_paths.length
+    @all_paths
   end
 
   def print_all_paths(s, d)
@@ -32,7 +32,7 @@ class Graph
   def generate_all_paths(s, d, print_paths: false)
     is_visited = {}
     path_list = []
-    @all_paths = []
+    @all_paths = 0
 
     path_list << s
 
@@ -43,7 +43,7 @@ class Graph
 
   def generate_all_paths_util(u, d, is_visited, local_path_list, print_paths)
     if u == d
-      @all_paths << local_path_list.join(',')
+      @all_paths += 1
       puts local_path_list.join(',') if print_paths
       return
     end
@@ -72,4 +72,5 @@ input = %w[start-YA ps-yq zt-mu JS-yi yq-VJ QT-ps start-yq YA-yi start-nf nf-YA 
 
 g = Graph.new(input)
 
+# g.print_all_paths('start', 'end')
 puts g.count_all_paths('start', 'end')
