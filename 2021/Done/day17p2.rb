@@ -28,14 +28,12 @@ while start_v_x <= x_max
     y = 0
     v_x = start_v_x
     v_y = start_v_y
-    steps = 0
 
     loop do
       x += v_x
       y += v_y
-      steps += 1
 
-      break if steps > 250
+      break if x > x_max || y < y_min
 
       if x >= x_min && x <= x_max && y >= y_min && y <= y_max
         # speeds << [start_v_x, start_v_y] unless speeds.include?([start_v_x, start_v_y])

@@ -28,20 +28,18 @@ while start_v_x <= x_max
     v_x = start_v_x
     v_y = start_v_y
     local_max_height = -999_999_999
-    steps = 0
 
     loop do
       x += v_x
       y += v_y
-      steps += 1
       local_max_height = y if y > local_max_height
 
-      break if steps > 250
+      break if x > x_max || y < y_min
 
       if x >= x_min && x <= x_max && y >= y_min && y <= y_max
         if local_max_height > max_height
           max_height = local_max_height
-          # puts "#{start_v_x},#{start_v_y} #{max_height} #{steps}"
+          # puts "#{start_v_x},#{start_v_y} #{max_height}"
         end
         break
       end
