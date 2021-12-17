@@ -67,8 +67,7 @@ end
 # input = %w[dc-end HN-start start-kj dc-start dc-HN LN-dc HN-end kj-sa kj-HN kj-dc]
 # input = %w[fs-end he-DX fs-he start-DX pj-DX end-zg zg-sl zg-pj pj-he RW-he fs-DX
 #            pj-RW zg-RW start-pj he-WI zg-he pj-fs start-RW]
-input = %w[start-YA ps-yq zt-mu JS-yi yq-VJ QT-ps start-yq YA-yi start-nf nf-YA nf-JS
-           JS-ez yq-JS ps-JS ps-yi yq-nf QT-yi end-QT nf-yi zt-QT end-ez yq-YA end-JS]
+input = File.readlines('day12.input').map(&:strip)
 
 g = Graph.new(input)
 
