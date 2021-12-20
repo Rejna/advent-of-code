@@ -12,15 +12,16 @@ def increasing_condition(num)
   num.join == num.sort.join
 end
 
-min = 248_345
-max = 746_315
+input = File.readlines('../1 Input/day04.input')[0].strip.split('-')
+min = input[0].to_i
+max = input[1].to_i
 counter = 0
 
 while min <= max
   min_str = min.to_s.split('')
 
   if double_condition(min_str) && increasing_condition(min_str)
-    puts min_str.join
+    # puts min_str.join
     counter += 1
   end
   min += 1
