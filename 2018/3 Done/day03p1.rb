@@ -8,7 +8,7 @@
 # fabric_size = 10
 # input = ['#1 @ 1,3: 4x4', '#2 @ 3,1: 4x4', '#3 @ 5,5: 2x2']
 # fabric_size = 8
-input = File.readlines('day03.input').map(&:strip)
+input = File.readlines('../1 Input/day03.input').map(&:strip)
 fabric_size = 1000
 
 fabric = []

@@ -13,7 +13,7 @@ require 'date'
 #          '[1518-11-04 00:02] Guard #99 begins shift', '[1518-11-04 00:36] falls asleep', '[1518-11-04 00:46] wakes up',
 #          '[1518-11-05 00:03] Guard #99 begins shift', '[1518-11-05 00:45] falls asleep']
 
-input = File.readlines('day04.input').map(&:strip)
+input = File.readlines('../1 Input/day04.input').map(&:strip)
 
 sorted_input = []
 

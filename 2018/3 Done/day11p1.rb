@@ -35,7 +35,7 @@ end
 
 # input = 18
 # input = 42
-input = 7511
+input = File.readlines('../1 Input/day11.input')[0].strip.to_i
 
 size = 300
 max_power = 0

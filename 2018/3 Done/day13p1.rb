@@ -11,7 +11,7 @@
 #           '\-+-/  \-+--/',
 #           '  \------/   ']
 
-@input = File.readlines('day13.input').map { |a| a.gsub(' ', '.') }.map(&:strip)
+@input = File.readlines('../1 Input/day13.input').map { |a| a.gsub(' ', '.') }.map(&:strip)
 @trains = []
 
 def action(train)

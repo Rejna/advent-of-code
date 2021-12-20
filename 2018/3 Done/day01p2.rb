@@ -8,7 +8,7 @@
 #           [%w[+3 +3 +4 -2 -4], 10],
 #           [%w[-6 +3 +8 +5 -6], 5],
 #           [%w[+7 +7 -2 -7 -4], 14]]
-inputs = [File.readlines('day01.input').map(&:strip).map { |a| a.gsub('+', '').to_i }]
+inputs = [File.readlines('../1 Input/day01.input').map(&:strip).map { |a| a.gsub('+', '').to_i }]
 
 inputs.each do |input|
   freqs = {} # bool hashes are much faster than Array.include?

@@ -4,7 +4,7 @@
 # https://adventofcode.com/2018/day/3#part2
 # Answer is: 346
 
-input = File.readlines('day03.input').map(&:strip)
+input = File.readlines('../1 Input/day03.input').map(&:strip)
 fabric_size = 1000
 
 fabric = []

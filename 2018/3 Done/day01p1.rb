@@ -4,4 +4,4 @@
 # https://adventofcode.com/2018/day/1
 # Answer is: 454
 
-puts File.readlines('day01.input').map { |a| a.gsub('+', '').to_i }.sum
+puts File.readlines('../1 Input/day01.input').map { |a| a.gsub('+', '').to_i }.sum

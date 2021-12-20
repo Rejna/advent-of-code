@@ -25,7 +25,7 @@ def eq_chars_in_strings(a, b)
 end
 
 # input = %w[abcde fghij klmno pqrst fguij axcye wvxyz]
-input = File.readlines('day02.input').map(&:strip)
+input = File.readlines('../1 Input/day02.input').map(&:strip)
 
 i = 0
 done = false

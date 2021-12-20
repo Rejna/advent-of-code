@@ -4,7 +4,7 @@
 # https://adventofcode.com/2018/day/2
 # Answer is: 5880
 
-input = File.readlines('day02.input').map(&:strip)
+input = File.readlines('../1 Input/day02.input').map(&:strip)
 
 threes = 0
 twos = 0

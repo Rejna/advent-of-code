@@ -48,7 +48,7 @@ def parse_tree(tree, i)
 end
 
 # inputs = [[[2, 3, 0, 3, 10, 11, 12, 1, 1, 0, 1, 99, 2, 1, 1, 2], 66]]
-inputs = [File.readlines('day08.input')[0].split(' ').map(&:to_i)]
+inputs = [File.readlines('../1 Input/day08.input')[0].split(' ').map(&:to_i)]
 
 inputs.each do |input|
   @debug = false

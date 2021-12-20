@@ -6,7 +6,7 @@ require 'date'
 # https://adventofcode.com/2018/day/4#part2
 # Answer is: 16164
 
-input = File.readlines('day04.input').map(&:strip)
+input = File.readlines('../1 Input/day04.input').map(&:strip)
 sorted_input = []
 
 input.each do |entry|
