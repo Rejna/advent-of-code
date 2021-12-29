@@ -43,8 +43,8 @@ def function(function_name, registers, a, b, c)
   temp_registers
 end
 
-input = File.readlines('1 Input/day16.input').map(&:strip)
-# input = File.readlines('1 Input/day16test.input').map(&:strip)
+input = File.readlines('../1 Input/day16.input').map(&:strip)
+# input = File.readlines('../1 Input/day16test.input').map(&:strip)
 all_functions = %w[addr addi mulr muli banr bani borr bori gtrr gtri gtir eqrr eqri eqir setr seti]
 i = 0
 counter = 0
