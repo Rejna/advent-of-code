@@ -4,8 +4,8 @@
 # https://adventofcode.com/2021/day/22
 # Answer is: 655005
 
-# input = File.readlines('1 Input/day22smalltest.input').map(&:strip)
-# input = File.readlines('1 Input/day22test.input').map(&:strip)
+# input = File.readlines('../1 Input/day22smalltest.input').map(&:strip)
+# input = File.readlines('../1 Input/day22test.input').map(&:strip)
 input = File.readlines('../1 Input/day22.input').map(&:strip)
 
 size = 50
