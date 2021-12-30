@@ -4,8 +4,8 @@
 # https://adventofcode.com/2018/day/22
 # Answer is: 10603
 
-# input = File.readlines('1 Input/day22test.input').map(&:strip)
-input = File.readlines('1 Input/day22.input').map(&:strip)
+# input = File.readlines('../1 Input/day22test.input').map(&:strip)
+input = File.readlines('../1 Input/day22.input').map(&:strip)
 
 depth = input[0].split(' ')[1].to_i
 target = input[1].split(' ')[1].split(',').map(&:to_i)
