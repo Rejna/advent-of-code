@@ -13,4 +13,4 @@ My Ruby solutions to [Advent of Code](https://adventofcode.com) tasks.
     * [Day 25 part 2](https://adventofcode.com/2021/day/25#part2)
 * [2020](https://adventofcode.com/2020) - 35/50 ⭐ (70%)
 * [2019](https://adventofcode.com/2019) - 27/50 ⭐ (54%)
-* [2018](https://adventofcode.com/2018) - 17/50 ⭐ (32%)
+* [2018](https://adventofcode.com/2018) - 20/50 ⭐ (40%)
